@@ -1,0 +1,86 @@
+.main-contact-page{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-6xl);
+}
+
+.cards-line{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.form{
+  max-width: var(--width-2xl);
+  padding: var(--spacing-7xl) var(--spacing-4xl);
+}
+
+.form .banner-message{
+  margin-bottom: var(--spacing-md);
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.form .pagePresentation{
+  background-color: transparent;
+  margin-bottom: var(--spacing-7xl);
+  padding: 0;
+}
+
+.form .name-input{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.form .name-input .group-form:first-child{
+  margin-right: var(--spacing-4xl);
+}
+
+.form .btn-component{
+  margin-top: var(--spacing-2xl);
+  width: 100%;
+}
+
+.form .group-input{
+  margin-bottom: var(--spacing-4xl);
+}
+
+.contact-form{
+  margin-bottom: var(--spacing-6xl);
+}
+
+.card-discord-access h2{
+  margin-bottom: var(--spacing-3xl);
+}
+
+.card-discord-access{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card-discord-access p a{
+  color: var(--text-brand-primary);
+  font-weight: 600;
+}
+
+@media (min-width: 600px) {
+  .card-discord-access p{
+    width: 545px;
+  }
+}
+
+
+@media (min-width: 750px) {
+  .card-discord-access{
+    background-color: var(--bg-secondary);
+    padding: var(--container-padding);
+    justify-content: center;
+    border-radius: var(--radius-xl);
+  }
+}

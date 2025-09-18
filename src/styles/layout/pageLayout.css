@@ -1,0 +1,93 @@
+#pageHeader.darkMode{
+  background: var(--bg-secondary-brand);
+}
+/* === Landing presentation === */
+.pagePresentation.whiteMode{
+  text-align: center;
+  background: var(--bg-secondary);
+  margin-top: 0;
+  margin-bottom: var(--spacing-3xl);
+}
+.pagePresentation.whiteMode .btn-component{
+  width: auto;
+}
+.pagePresentation{
+  margin-top: -2.75rem;
+  padding: var(--spacing-7xl) var(--spacing-xl);
+  margin-bottom: var(--spacing-6xl);
+}
+.pagePresentation .presentation-img img{
+  display: none;
+}
+.pagePresentation h1{
+  color: var(--text-primary_on-brand);
+}
+.pagePresentation.whiteMode h1{
+  color: var(--text-primary);
+}
+.pagePresentation.whiteMode .subtle{
+  color: var(--text-secondary)!important;
+}
+.pagePresentation .subtle{
+  color: var(--text-placeholder_subtle) !important;
+}
+.pagePresentation h1, .pagePresentation p{
+  margin-bottom: var(--spacing-lg);
+}
+/* === Responsive === */
+@media (min-width: 800px) {
+  #logo-bloc, .pagePresentation {
+    padding-left: var(--spacing-9xl)!important;
+    padding-right: var(--spacing-9xl)!important;
+  }
+  .pagePresentation{
+    margin-bottom: var(--spacing-4xl);
+  }
+  .pagePresentation h1{
+    margin-bottom: var(--spacing-xl);
+  }
+}
+@media (min-width: 950px) {
+  .pagePresentation .presentation-img img{
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  .pagePresentation .presentation-img{
+    max-width: calc(var(--width-xs) + 7vw);
+    padding-right: 7vw;
+    padding-left: 3vw;
+  }
+  .pagePresentation{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .pagePresentation p, .pagePresentation h1{
+    margin-bottom: var(--spacing-5xl);
+  }
+
+  .pagePresentation.whiteMode h1, .pagePresentation.whiteMode h2, .pagePresentation.whiteMode p{
+    margin-bottom: var(--spacing-xl);
+  }
+
+  .pagePresentation.whiteMode{
+    padding: var(--spacing-11xl) 0;
+  }
+
+  .pagePresentation h1{
+    font-size: calc(3rem + 0.1vw);
+    line-height: calc(3.75rem + 0.1vw);
+    letter-spacing: -2%;
+  }
+
+  .pagePresentation.whiteMode{
+    flex-direction: column;
+    justify-content: center;
+  }
+  .pagePresentation *{
+    max-width: 1580px;
+    width: 100%;
+  }
+}

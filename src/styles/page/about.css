@@ -1,0 +1,54 @@
+/* Root wrapper pour la page About */
+.about-page {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-10xl);
+}
+
+/* Ligne de cartes "Nos forces" */
+.about-page .cards-line {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-3xl);
+  margin-bottom: var(--spacing-6xl);
+  width: 70vw; /* limité à la largeur visible */
+}
+
+/* Section avec positionnement spécifique (alignement centré) */
+.about-page .about-left {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Titre section FAQ */
+.about-page h2.faq-title {
+  margin-bottom: var(--spacing-7xl);
+  text-align: center;
+}
+
+.FAQ main.faq{
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-4xl);
+}
+
+/* Liste des questions/réponses (FAQ) */
+.about-page .faq-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-4xl);
+}
+
+/* Style spécifique aux détails repliés */
+.about-page .detail-component p.detail.closed {
+  margin-top: -2.2rem; /* Positionnement visuel pour éviter les décalages */
+}
+
+/* Section d'appel à l'action (CTA) sans padding hérité */
+.about-page .cta-section {
+  padding: 0 !important;
+}

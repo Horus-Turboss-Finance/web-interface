@@ -1,0 +1,50 @@
+.settingBar{
+  padding: var(--spacing-7xl) var(--spacing-4xl);
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+
+  background-color: #fff;
+
+  height: 100vh;
+  max-width: var(--width-xs);
+  width: 100vw;
+}
+
+.settingBar .settingTopHeaderBar{
+  margin-bottom: var(--spacing-4xl);
+}
+
+.settingBar .settingTopHeaderBar .uptop{
+  margin-bottom: var(--spacing-2xl);
+}
+
+.settingBar .settingTopHeaderBar .rotate-icon-180{
+  margin-bottom: var(--spacing-lg);
+}
+
+.settingBar .linkCardDiv{
+  margin-bottom: var(--spacing-lg);
+}
+
+.settingBar .linkCardDiv:last-child{
+  margin-bottom: 0;
+}
+
+.settingBar .settingMainHeaderBar, .settingBar .settingBarHeaderIcon, .settingBar .settingFooterBar, .settingBar .settingFooterMainBar{
+  width: 100%;
+}
+
+.settingBar .lineSeparation{
+  margin-bottom: var(--spacing-3xl);
+  width: var(--spacing-10xl);
+  border-bottom: 1px solid var(--border-primary);
+}
+
+.settingBar .settingFooterBar{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}

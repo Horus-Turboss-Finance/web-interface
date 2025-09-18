@@ -1,0 +1,63 @@
+.section .listCardsSection .linkCardDiv:first-child {
+  margin-top: var(--spacing-3xl);
+}
+
+.section .listCardsSection .linkCardDiv {
+  margin-top: var(--spacing-md);
+}
+
+.section .btnList{
+  margin-top: var(--spacing-xl);
+}
+
+.section {
+  margin-top: var(--spacing-6xl);
+}
+
+.section .contain-category{
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-3xl);
+  justify-content: space-between;
+}
+
+.section .contain-category .contain{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.section .contain-category .contain button, .section .contain-category .contain .btnList{
+  width: 100%;
+}
+
+.section main{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: var(--spacing-xl);
+}
+
+.section main .contain{
+  width: calc(50% - var(--spacing-xl));
+}
+
+@media (max-width: 1150px) {
+  .section main .contain{
+    width: 100%;
+  }
+}
+
+.section .line{
+  display: block;
+  width: 40%;
+  margin: var(--spacing-md) auto;
+  height: 1px;
+  background-color: var(--border-secondary);
+  border: none;
+}
+
+.section h2{
+  width: 100%;
+  text-align: center;
+}

@@ -1,0 +1,202 @@
+.group-form{
+  width: 100%;
+}
+
+.group-form .errorLabel{
+  color: var(--text-error-primary);
+  margin-top: var(--spacing-sm);
+}
+
+.group-form label, .group-form .labelDiv, .group-form .errorLabel, .group-form input, .group-form .input-group, .group-form textarea{
+  width: 100%;
+}
+
+.group-form .hiddenInput{
+  display: none;
+}
+
+.group-form label, .group-form .labelDiv{
+  display: flex;
+}
+.group-form label .labelText, .group-form .labelDiv .labelText{
+  margin-right: var(--spacing-xs);
+}
+
+.group-form input::placeholder, .group-form textarea::placeholder{
+  color: var(--text-placeholder);
+}
+
+.group-form input, .group-form input:focus, .group-form textarea, .group-form textarea:focus {
+  outline: none;
+  border: none;
+}
+
+.group-form textarea{
+  padding: var(--spacing-md) var(--spacing-lg);
+
+  height: var(--spacing-32);
+
+  resize: none;
+}
+
+.group-form .input-group svg{
+  margin-right: var(--spacing-2);
+}
+
+.group-form .input-group.linkCardDiv{
+  border-radius: var(--radius-xs);
+}
+
+.group-form .input-group{
+  display: flex;
+
+  padding: var(--spacing-md) var(--spacing-lg);
+  margin-top: var(--spacing-sm);
+
+  border-radius: var(--radius-md);
+
+  border: 1px solid var(--border-primary);
+
+  background: var(--bg-primary);
+
+  transition: all 0.1s ease-out;
+}
+
+.group-form .input-group.smallInput{
+  padding: var(--spacing-xs) var(--spacing-sm);
+}
+
+.group-form .input-group.disabled{
+  border: 1px solid var(--border-disabled);
+
+  background-color: var(--bg-disabled);
+}
+
+.group-form .input-group.focus{
+  box-shadow: 0 1px 2px var(--shadows-md), 0 0 0 2px #ffffff, 0 0 0 4px var(--border-brand);
+
+  border: 1px solid #fff;
+
+  transition: all 0.1s ease-in;
+}
+
+.group-form .errorInput {
+  border: 1px solid var(--border-error);
+}
+
+.group-form .input-group.errorInput.focus{
+  box-shadow: 0 1px 2px var(--shadows-md), 0 0 0 2px #ffffff, 0 0 0 4px var(--border-error);
+}
+
+.headerDatePicker{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: var(--spacing-md);
+}
+
+.headerDatePicker .iconSVGROT{
+  height: 24px;
+  width: 24px;
+}
+
+.gridDatePicker {
+  display: grid;
+  grid-template-rows: subgrid;
+  grid-template-columns: subgrid;
+  grid-column: 1 / 8;
+  grid-row: 1;
+}
+
+.customDrop main.grid-contain{
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-template-rows: repeat(7, 1fr);
+  width: 100%;
+  height: 17rem;
+}
+
+.customDrop main.grid-contain span{
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.gridDateConsume {
+  display: grid;
+  grid-template-rows: subgrid;
+  grid-template-columns: subgrid;
+  grid-column: 1 / 8;
+  grid-row: 2/8;
+}
+
+.customDrop{
+  padding: var(--spacing-lg) var(--spacing-xl) !important;
+}
+
+.customDrop .secondary-date{
+  color: var(--text-quaternary);
+}
+
+.customDrop .selected-date.secondary-date, .customDrop .date-line-picker.selected-date:hover{
+  background-color: var(--bg-brand-section_subtle);
+  color: var(--text-white);
+}
+
+.customDrop .selected-date, .customDrop .selected-date.secondary-date:hover{
+  background-color: var(--bg-brand-section);
+  color: var(--text-white);
+  margin: auto;
+}
+
+.customDrop .date-line-picker {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+
+  margin: auto;
+  
+  width: 25px;
+  height: 25px;
+
+  transition: all 0.3s ease;
+
+  border-radius: var(--radius-md);
+}
+
+.customDrop .date-line-picker:hover {
+  color: var(--text-secondary_hover);
+  background-color: var(--bg-quaternary);
+}
+
+.switchInput {
+  padding: 0!important;
+
+  .switchInputOption {
+    padding: var(--spacing-md) var(--spacing-lg);
+    transition: all 0.7s ease;
+    justify-content: center;
+    border-radius: var(--radius-md);
+    display: flex;
+    width: 100%;
+    margin-right: calc(var(--spacing-xl) * -1);
+  }
+  .switchInputOption:hover{
+    background-color: var(--bg-brand-primary);
+  }
+  .switchInputOption.selectedSwitchOption{
+    background-color: var(--bg-brand-section_subtle);
+    color: var(--text-white);
+    z-index: 3;
+  }
+  .leftSwitchOption{
+    border-radius: 0 var(--radius-md) var(--radius-md) 0;
+  }
+  .rightSwitchOption{
+    border-radius: var(--radius-md) 0 0 var(--radius-md);
+    margin-right: 0;
+  }
+}

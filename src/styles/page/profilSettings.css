@@ -1,0 +1,187 @@
+.setting-page,
+.setting-page .main-header-setting-page,
+.setting-page .cardProfil .profilPicture,
+.setting-page .cardProfil .formPage .input-group-form{
+  display: flex;
+}
+
+.contain-header,
+.main-settings,
+.setting-page .formPage,
+.setting-page .cardProfil,
+.setting-page .cardProfil .formPage .input-group-form,
+.setting-page .cardProfil .banner,
+.setting-page .containerImg img{
+  width: 100%;
+}
+
+.main-settings{
+  height: 100vh;
+  width: 100%;
+
+  overflow-y: auto;
+  overflow-x: hidden;
+
+  scrollbar-width: none; 
+}
+
+.content-setting{
+  padding: var(--spacing-8xl) var(--spacing-5xl);
+  max-width: var(--spacing-192);
+}
+
+.main-settings::-webkit-scrollbar, .main-settings::-webkit-scrollbar-button { display: none; }
+
+.setting-page .cardProfil .profilPicture,
+.setting-page .main-header-setting-page{
+  align-items: center;
+}
+
+.main-settings{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.setting-page .securityZone,
+.setting-page .cardProfil{
+  max-width: var(--paragraph-max-width);
+}
+
+.setting-page .formPage{
+  padding: var(--spacing-4xl) var(--spacing-6xl);
+}
+
+.setting-page .cardProfil{
+  background-color: var(--gray-25);
+  border-radius: var(--radius-md) ;
+
+  margin: var(--spacing-6xl) 0;
+}
+
+.setting-page .cardProfil .formPage .input-group-form{
+  align-items: flex-end;
+  justify-content: space-between;
+
+  margin-bottom: var(--spacing-lg);
+}
+
+.setting-page .cardProfil .formPage .input-group-form:last-child{
+  margin-bottom: 0;
+}
+
+.setting-page .cardProfil .banner{
+  height: 96px;
+  border-radius: var(--radius-md) var(--radius-md) 0 0;
+}
+
+.setting-page .cardProfil .profilPicture .containerImg img{
+  height: 100%;
+  border-radius: var(--radius-full);
+  padding: var(--spacing-xs);
+}
+
+.setting-page .cardProfil .profilPicture .containerImg{
+  border-radius: var(--radius-full);
+
+  height: 104px;
+  width: 104px;
+  background-color: var(--gray-25);
+
+  margin-right: var(--spacing-2xl);
+}
+
+.setting-page .cardProfil .profilPicture{
+  transform: translateY(-2rem);
+  padding-left: var(--spacing-4xl);
+  margin-bottom: calc(-2rem - var(--spacing-2xl));
+}
+
+.setting-page .securityZone{
+  margin-bottom: var(--spacing-6xl);
+}
+
+.setting-page .securityZone .password{
+  margin-bottom: var(--spacing-2xl);
+}
+
+.setting-page .securityZone .authKeys .text-sm,
+.setting-page .securityZone .password h3, 
+.setting-page .dangerZone .text-sm,
+.setting-page .dangerZone .text-md {
+  margin-bottom: var(--spacing-lg);
+}
+
+.setting-page .main-header-setting-page{
+  flex-direction: column;
+  justify-content: center;
+}
+
+.setting-page .line{
+  width: 120px;
+  border-bottom: 1px solid var(--border-primary);
+}
+
+.setting-page .contain-header h1{
+  margin-bottom: var(--spacing-4xl);
+}
+
+.setting-page .contain-header svg{
+  margin-bottom: var(--spacing-2xl);
+}
+
+.banner-message p{
+  margin-bottom: 0!important;
+}
+
+.setting-page .modals .banner-message{
+  margin-bottom: var(--spacing-2xl);
+}
+
+.setting-page .settingBar{
+  transition: all 0.75s ease;
+  position: absolute;
+  left: -50rem;
+
+  z-index: 1000;
+}
+
+.setting-page .settingBar.open{
+  left: 0;
+}
+
+@media (min-width: 900px) {
+  .setting-page .contain-header svg, .setting-page .line{
+    display: none;
+  }
+
+  .setting-page .contain-header h1{
+    margin-bottom: 0;
+  }
+
+  .setting-page .settingBar{
+    position: initial;
+  }
+}
+
+@media (max-width: 475px) {
+  .setting-page .input-group-form{
+    flex-direction: column;
+  }
+
+  .setting-page .input-group-form .btn-component, .setting-page .rigth, .setting-page .left{
+    width: 100%;
+  }
+
+  .setting-page .main-settings{
+    padding: var(--spacing-2xl) var(--spacing-xl);
+  }
+
+  .setting-page .formPage{
+    padding: var(--spacing-2xl) var(--spacing-xl);
+  }
+
+  .setting-page .profilPicture{
+    padding-left: var(--spacing-md)!important;
+  }
+}

@@ -1,0 +1,94 @@
+.banner-message{
+    display: flex;
+    align-items: center;
+
+    padding: var(--spacing-xs);
+    padding-right: var(--spacing-md);
+
+    border-radius: var(--radius-sm);
+
+    width: fit-content;
+}
+
+.banner-message .context{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.banner-message .banner, .banner-message .message{
+    margin-top: 0;
+}
+
+.banner-message .message{
+    margin-right: var(--spacing-lg);
+}
+
+.banner-message .banner{
+    border-radius: var(--radius-sm);
+    background-color: white;
+    border: 1px solid white;
+
+    padding: 0 var(--spacing-sm);
+    margin-right: var(--spacing-sm);
+}
+
+.banner-message.error *{
+    color: var(--text-error-primary) !important;
+    stroke: var(--fg-error-primary);
+}
+.banner-message.error{
+    background-color: var(--bg-error-primary);
+    border: 1px solid var(--border-error_subtle);
+}
+.banner-message.error .banner{
+    border: 1px solid var(--border-error_subtle);
+}
+
+.banner-message.success *{
+    color: var(--text-success-primary) !important;
+    stroke: var(--fg-success-primary);
+}
+.banner-message.success{
+    background-color: var(--bg-success-primary);
+    border: 1px solid var(--border-success_subtle);
+}
+.banner-message.success .banner{
+    border: 1px solid var(--border-success_subtle);
+}
+
+.banner-message.warning *{
+    color: var(--text-warning-primary) !important;
+    stroke: var(--fg-warning-primary);
+}
+.banner-message.warning{
+    background-color: var(--bg-warning-primary);
+    border: 1px solid var(--border-warning_subtle);
+}
+.banner-message.warning .banner{
+    border: 1px solid var(--border-warning_subtle);
+}
+
+.banner-message.brand *{
+    color: var(--text-brand-primary) !important;
+    stroke: var(--fg-brand-primary);
+}
+.banner-message.brand{
+    background-color: var(--bg-brand-primary);
+    border: 1px solid var(--border-brand_alt);
+}
+.banner-message.brand .banner{
+    border: 1px solid var(--border-brand_alt);
+}
+
+.banner-message.secondary *{
+    color: var(--text-quaternary) !important;
+    stroke: var(--fg-quaternary);
+}
+.banner-message.secondary{
+    background-color: var(--bg-tertiary);
+    border: 1px solid var(--border-primary);
+}
+.banner-message.secondary .banner{
+    border: 1px solid var(--border-primary);
+}

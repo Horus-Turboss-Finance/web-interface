@@ -1,0 +1,63 @@
+#footerLanding{
+  padding: var(--spacing-7xl) var(--spacing-xl);
+  display: flex;
+  flex-direction: column-reverse;
+  background: var(--bg-secondary-brand);
+  gap: var(--spacing-4xl);
+}
+.signature-website{
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-4xl);
+
+}
+.signature-website .logo{
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-lg);
+}
+.signature-website .logo h1{
+  font-weight: 700;
+  color: var(--text-primary_on-brand);
+  transition: all 0.5s ease;
+}
+.signature-website p{
+  color: var(--text-placeholder_subtle);
+}
+.signature-website .logo:hover h1{
+  color: var(--text-secondary_on-brand);
+}
+.signature-website a{
+  text-decoration: none;
+}
+.navi{
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-xl);
+}
+
+@media (min-width: 800px) {
+  #footerLanding{
+    padding: var(--spacing-9xl)!important;
+  }
+  #footerLanding .navi{
+    justify-content: space-between;
+  }
+  .signature-website{
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+@media (min-width: 950px) {
+  #footerLanding{
+    padding: var(--spacing-9xl) var(--spacing-11xl);
+  }
+  #footerLanding .signature-website{
+    max-width: 1580px;
+    width: 100%;
+  }
+  .signature-website{
+    flex-direction: row;
+  }
+}

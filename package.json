@@ -1,0 +1,48 @@
+{
+  "name": "frontend",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host",
+    "build:client": "tsc -b && vite build --outDir dist/client",
+    "build:server": "tsc -b && vite build --outDir dist/server --ssr ./src/server-entry.js ",
+    "lint": "eslint .",
+    "preview": "vite preview",
+    "preproduction": "npm run build:client && npm run build:server",
+    "release": "standard-version",
+    "release:patch": "npm run release -- --release-as patch",
+    "release:minor": "npm run release -- --release-as minor",
+    "release:major": "npm run release -- --release-as major",
+    "commit": "gitmoji -c",
+    "production": "npm install && npm run preproduction pm2 startOrReload ./ecosystem.config.js"
+  },
+  "dependencies": {
+    "@types/react-helmet": "^6.1.11",
+    "axios": "^1.10.0",
+    "compression": "^1.8.1",
+    "date-fns": "^4.1.0",
+    "express": "^5.1.0",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "react-helmet": "^6.1.0",
+    "react-router-dom": "^7.7.0",
+    "sirv": "^3.0.1"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.30.1",
+    "@types/compression": "^1.8.1",
+    "@types/express": "^5.0.3",
+    "@types/react": "^19.1.8",
+    "@types/react-dom": "^19.1.6",
+    "@vitejs/plugin-react": "^4.6.0",
+    "eslint": "^9.30.1",
+    "eslint-plugin-react-hooks": "^5.2.0",
+    "eslint-plugin-react-refresh": "^0.4.20",
+    "globals": "^16.3.0",
+    "standard-version": "^9.5.0",
+    "typescript": "~5.8.3",
+    "typescript-eslint": "^8.35.1",
+    "vite": "^7.0.4"
+  }
+}

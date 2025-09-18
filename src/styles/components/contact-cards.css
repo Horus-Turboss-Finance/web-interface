@@ -1,0 +1,67 @@
+.cards-contact .icon .icon-title{
+  width: 32px;
+  height: 32px;
+  border-radius: var(--radius-sm);
+  background-color: var(--bg-brand-section);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cards-contact{
+  background-color: var(--bg-secondary);
+  border-radius: var(--radius-xl);
+  padding: var(--spacing-3xl);
+  margin: var(--spacing-3xl);
+  min-width: 300px;
+  width: 27%;
+}
+
+.cards-contact .content{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.cards-contact .icon{
+  margin-bottom: var(--spacing-5xl);
+}
+
+.cards-contact li{
+  list-style-position:inside;
+}
+
+.cards-contact h3{
+  margin-bottom: var(--spacing-md);
+}
+
+.content-text .containlinks{
+  width: 100%;
+  max-width: none;
+  margin: 0;
+}
+
+.content-text a{
+  color: var(--text-brand-primary)
+}
+
+.content-text li::marker{
+  color: var(--text-brand-primary)
+}
+
+@media (min-width: 700px) {
+  .cards-contact{
+    align-items: center;
+  }
+
+  .cards-contact .content{
+    align-items: center;
+  }
+}
+
+.cards-contact a{
+  text-decoration: none;
+  color: var(--text-brand-secondary);
+}

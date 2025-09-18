@@ -1,0 +1,13 @@
+.micro-card {
+  margin-bottom: var(--spacing-4xl);
+  max-width: 393px;
+}
+.micro-card h3{
+  font-weight: 600;
+  margin-bottom: var(--spacing-xl);
+}
+.micro-card p{
+  color: var(--text-secondary);
+  margin-bottom: var(--spacing-xl);
+}
+

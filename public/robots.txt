@@ -1,0 +1,18 @@
+User-agent: *
+
+Disallow: /404
+Disallow: /signup
+Disallow: /signin
+
+Allow: /features
+Allow: /privacy
+Allow: /cookies
+Allow: /contact
+Allow: /legals
+Allow: /about
+Allow: /terms
+Allow: /soon
+Allow: /418
+Allow: /
+
+Sitemap: https://cashsight.fr/sitemap.xml

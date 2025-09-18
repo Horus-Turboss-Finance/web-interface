@@ -1,0 +1,83 @@
+.connecticPage{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+
+  background-image: url("/mesh.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.sign-content {
+  min-width: var(--width-xss);
+  max-width: var(--width-lg);
+  width: calc(45vw + 7rem);
+
+  padding: var(--spacing-4xl);
+
+  border-radius: var(--radius-xl);
+
+  background-color: #eff1f5aa;
+  backdrop-filter: blur(5px);
+
+  header {
+    text-align: center;
+    margin-bottom: var(--spacing-xl);
+  }
+
+  form{
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-xl);
+  }
+
+  form .group-class-input {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-sm);
+  }
+
+  form .margin-class {
+    margin-bottom: var(--spacing-xs);
+  }
+
+  form .margin-class a {
+    margin-top: calc(var(--spacing-md) * -1);
+  }
+
+  form button{
+    width: 100%;
+  }
+
+  a {
+    color: var(--text-brand-primary) !important;
+    text-decoration: none;
+    font-weight: 700;
+  }
+}
+
+@media (max-width: 500px) {
+  .sign-content{
+    width: 100vw;
+    height: 100vh;
+    border-radius: 0;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .sign-content header{
+    margin-top: calc(var(--spacing-7xl) * -1);
+  }
+
+  .sign-content form {
+    width: 100%;
+  }
+  
+}

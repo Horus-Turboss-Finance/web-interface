@@ -1,0 +1,291 @@
+.btn-component{
+  transition: all 0.5s ease;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: var(--spacing-lg);
+  text-align: center;
+  text-decoration: none;
+  border-radius: var(--radius-sm);
+}
+
+.btn-component.disabledBtn{
+  cursor: not-allowed;
+}
+
+.btn-component svg{
+  height: calc(40px - var(--spacing-lg));
+  width: calc(40px - var(--spacing-lg));
+}
+
+.round-btn.primary-btn,.round-btn.secondary-btn,.round-btn.tertiary-btn,.round-btn.optionnel{
+  border-radius: var(--radius-full);
+  height: 48px;
+  width: 48px;
+  padding: var(--spacing-lg);
+}
+
+/* Size variant */
+.largeBtn{
+  padding: var(--spacing-lg) var(--spacing-2xl);
+}
+.square-btn.largeBtn{
+  padding: var(--spacing-lg);
+}
+.mediumBtn{
+  padding: var(--spacing-md) var(--spacing-xl);
+}
+.square-btn.mediumBtn{
+  padding: var(--spacing-md);
+}
+.smallBtn{
+  padding: var(--spacing-sm) var(--spacing-xl);
+}
+.square-btn.smallBtn{
+  padding: var(--spacing-sm);
+}
+
+/* ----------------------------------------------- */
+/* ---                                         --- */
+/* ---              PRIMARY BTN                --- */
+/* ---                                         --- */
+/* ----------------------------------------------- */
+
+.primary-btn, 
+.primary-btn:visited{
+  border: 0px;
+  background-color: var(--bg-brand-section_subtle);
+  color: var(--text-primary_on-brand)!important;
+}
+
+.primary-btn:hover{
+  background-color: var(--bg-brand-section);
+}
+
+.primary-btn:focus{
+  background-color: var(--bg-brand-primary)!important;
+  box-shadow: 
+  0 0 0 1px var(--shadows-4xl) inset, 
+  0 -2px var(--shadows-md), 
+  0 1px 2px var(--shadows-md), 
+  0 0 0 2px #fff,
+  0 0 0 4px var(--border-brand);
+}
+
+/* Destructive variant */
+.primary-btn.destructiveBtn {
+  background-color: var(--fg-error-primary);
+}
+
+.primary-btn.destructiveBtn:hover{
+  background-color: var(--fg-error-secondary);
+}
+
+.primary-btn.destructiveBtn:focus{
+  background-color: var(--bg-error-primary)!important;
+  border: 1px solid var(--border-error_subtle);
+  box-shadow: 
+  0 0 0 1px var(--shadows-4xl) inset, 
+  0 -2px var(--shadows-md), 
+  0 1px 2px var(--shadows-md), 
+  0 0 0 2px #fff,
+  0 0 0 4px var(--border-error);
+}
+
+/* Disabled states */
+.primary-btn.disabledBtn{
+  background-color: var(--bg-brand-section_subtle);
+  opacity: 0.4;
+}
+
+.primary-btn.destructiveBtn.disabledBtn{
+  background: var(--bg-error-primary);
+  color: var(--text-error-primary)!important;
+}
+
+/* ----------------------------------------------- */
+/* ---                                         --- */
+/* ---              SECONDARY BTN              --- */
+/* ---                                         --- */
+/* ----------------------------------------------- */
+
+.secondary-btn, 
+.secondary-btn:visited{
+  border: 1px solid var(--border-secondary);
+  background-color: var(--bg-secondary);
+  color: var(--text-primary)!important;
+}
+
+.secondary-btn:hover{
+  background-color: var(--bg-secondary_hover);
+}
+
+.secondary-btn:focus{
+  background-color: var(--bg-active)!important;
+  box-shadow: 
+  0 0 0 1px var(--shadows-4xl) inset, 
+  0 -2px var(--shadows-md), 
+  0 1px 2px var(--shadows-md), 
+  0 0 0 2px #fff,
+  0 0 0 4px var(--border-brand);
+}
+
+/* Destructive variant */
+.secondary-btn.destructiveBtn {
+  border: 1px solid var(--border-error_subtle);
+  background-color: var(--bg-error-secondary);
+  color: var(--text-error-primary)!important;
+}
+
+.secondary-btn.destructiveBtn:hover{
+  background-color: var(--bg-error-primary);
+}
+
+.secondary-btn.destructiveBtn:focus{
+  background-color: var(--fg-error-primary)!important;
+  color: var(--text-primary_on-brand)!important;
+  box-shadow: 
+  0 0 0 1px var(--shadows-4xl) inset, 
+  0 -2px var(--shadows-md), 
+  0 1px 2px var(--shadows-md), 
+  0 0 0 2px #fff,
+  0 0 0 4px var(--border-error);
+}
+
+/* Disabled states */
+.secondary-btn.disabledBtn{
+  background-color: var(--bg-disabled);
+  color: var(--text-disabled)!important;
+  opacity: 0.9;
+}
+
+.secondary-btn.destructiveBtn.disabledBtn{
+  background: var(--bg-error-primary);
+  color: var(--border-error_subtle)!important;
+}
+
+/* ----------------------------------------------- */
+/* ---                                         --- */
+/* ---              TERTIARY BTN               --- */
+/* ---                                         --- */
+/* ----------------------------------------------- */
+
+.tertiary-btn, 
+.tertiary-btn:visited{
+  background-color: var(--bg-secondary);
+  border: none;
+  color: var(--text-primary)!important;
+}
+
+.tertiary-btn:hover{
+  background-color: var(--bg-secondary_hover);
+}
+
+.tertiary-btn:focus{
+  background-color: var(--bg-active)!important;
+  box-shadow: 
+  0 0 0 1px var(--shadows-4xl) inset, 
+  0 -2px var(--shadows-md), 
+  0 1px 2px var(--shadows-md), 
+  0 0 0 2px #fff,
+  0 0 0 4px var(--border-brand);
+}
+
+/* Destructive variant */
+.tertiary-btn.destructiveBtn {
+  background-color: var(--bg-error-primary);
+}
+
+.tertiary-btn.destructiveBtn:hover{
+  background-color: var(--bg-error-secondary);
+}
+
+.tertiary-btn.destructiveBtn:focus{
+  background-color: var(--fg-error-primary)!important;
+  color: var(--text-primary_on-brand)!important;
+  box-shadow: 
+  0 0 0 1px var(--shadows-4xl) inset, 
+  0 -2px var(--shadows-md), 
+  0 1px 2px var(--shadows-md), 
+  0 0 0 2px #fff,
+  0 0 0 4px var(--border-error);
+}
+
+/* Disabled states */
+.tertiary-btn.disabledBtn{
+  background-color: var(--bg-disabled);
+  color: var(--text-disabled)!important;
+  opacity: 0.9;
+}
+
+.tertiary-btn.destructiveBtn.disabledBtn{
+  background-color: var(--bg-error-secondary);
+  color: var(--border-error_subtle)!important;
+}
+
+/* ----------------------------------------------- */
+/* ---                                         --- */
+/* ---             OPTIONNEL BTN               --- */
+/* ---                                         --- */
+/* ----------------------------------------------- */
+
+.optionnel, 
+.optionnel:visited{
+  background-color: var(--bg-secondary);
+  padding: var(--spacing-xxs) var(--spacing-xs);
+  width: max-content;
+  color: var(--text-brand-primary)!important;
+  text-decoration: underline #ffffff00;
+  border: none;
+  transition: all 0.25s ease;
+}
+
+.optionnel:hover{
+  text-decoration: underline var(--text-brand-primary);
+}
+
+.optionnel:focus{
+  text-decoration: underline #ffffff00;
+  background-color: var(--bg-active)!important;
+  box-shadow: 
+  0 0 0 1px var(--shadows-4xl) inset, 
+  0 -2px var(--shadows-md), 
+  0 1px 2px var(--shadows-md), 
+  0 0 0 2px #fff,
+  0 0 0 4px var(--border-brand);
+}
+
+/* Destructive variant */
+.optionnel.destructiveBtn {
+  background-color: var(--bg-error-primary);
+  color: var(--text-error-primary)!important;
+}
+
+.optionnel.destructiveBtn:hover{
+  text-decoration: underline var(--text-error-primary);
+}
+
+.optionnel.destructiveBtn:focus{
+  background-color: var(--fg-error-secondary)!important;
+  text-decoration: underline #ffffff00;
+  color: var(--text-primary_on-brand)!important;
+  box-shadow: 
+  0 0 0 1px var(--shadows-4xl) inset, 
+  0 -2px var(--shadows-md), 
+  0 1px 2px var(--shadows-md), 
+  0 0 0 2px #fff,
+  0 0 0 4px var(--border-error);
+}
+
+/* Disabled states */
+.optionnel.disabledBtn{
+  background-color: var(--bg-secondary);
+  color: var(--text-disabled)!important;
+  opacity: 0.9;
+}
+
+.optionnel.destructiveBtn.disabledBtn{
+  background-color: var(--bg-error-primary);
+  color: var(--border-error_subtle)!important;
+}

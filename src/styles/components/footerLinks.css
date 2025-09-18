@@ -1,0 +1,26 @@
+
+.containlinks{
+  min-width: 40%;
+  max-width: 50%;
+  margin: 0 var(--spacing-4xl) var(--spacing-4xl) 0;
+}
+.containlinks h4{
+  font-weight: 400;
+  color: var(--text-primary_on-brand);
+  margin-bottom: var(--spacing-xl);
+}
+.containlinks nav{
+  display: flex;
+  flex-direction: column;
+}
+.containlinks a{
+  text-decoration: none;
+  color: var(--text-secondary_on-brand);
+  font-weight: 400;
+  margin-bottom: var(--spacing-lg);
+}
+@media (min-width: 800px) {
+  .containlinks{
+    min-width: fit-content;
+  }
+}

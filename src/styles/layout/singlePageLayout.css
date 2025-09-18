@@ -1,0 +1,35 @@
+/**
+ * Wrapper de page centrée verticalement et horizontalement.
+ * Utilisé pour les pages de type "single", comme les pages d'erreur ou les pages vides.
+ */
+.single-page-layout {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  width: 100vw;
+  height: 100vh;
+
+  overflow: hidden;
+}
+
+/**
+ * Titre principal dans une page unique.
+ * Espacement suffisant avec la description + couleur cohérente avec la hiérarchie visuelle.
+ */
+.single-page-layout__title {
+  margin-bottom: var(--spacing-3xl);
+  color: var(--text-primary);
+  text-align: center;
+}
+
+/**
+ * Description accompagnant le titre.
+ * Moins visible que le titre, mais bien espacée pour la lisibilité.
+ */
+.single-page-layout__description {
+  margin-bottom: var(--spacing-2xl);
+  color: var(--text-secondary);
+  text-align: center;
+}
