@@ -85,9 +85,9 @@ Avant toute **pull request**, merci de :
    ```
 
 5. Vérifier que la version Server Side Rendering (SSR) fonctionne correctement :
-  ```bash
-  node ./server.js
-  ```
+   ```bash
+   node ./server.js
+   ```
 
 ## 📥 Création d'une Pull Request
 Une PR propre doit :

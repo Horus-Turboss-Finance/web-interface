@@ -9,6 +9,7 @@
 Ce dépôt contient l’**interface web** de Cash Sights, développée avec **React** et **ViteJS**, pour des performances optimales et une expérience utilisateur fluide.
 
 🔗 Site en production : [https://cashsight.fr/](https://cashsight.fr/)
+
 📁 Dépôt Git : `git@github.com:Horus-Turboss-Finance/web-interface.git`
 
 ## ⚙️ Stack technique
