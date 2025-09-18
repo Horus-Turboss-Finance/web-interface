@@ -47,7 +47,7 @@ app.get(/(.*)/, async (req, res, next) => {
     res.status(200).type('html').send(html);
   } catch (e) {
     console.error(e.stack);
-    res.status(500).end(e.stack);
+    res.status(500).end("Une erreur est survenue");
   }
 });
 
