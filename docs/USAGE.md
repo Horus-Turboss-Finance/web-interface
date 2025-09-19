@@ -1,5 +1,5 @@
 # ▶️ USAGE
-Ce document explique **comment utiliser l'interface Cash Sights en local**, avec un focus sur les commandes de développement, de build, et la configuration via les variables d’environnement.
+Ce document explique **comment utiliser l'interface Cash Sights en local**, avec un focus sur les commandes de développement, de build, et la configuration via les variables d'environnement.
 
 ## 🔄 Lancer l'application en local (mode développement)
 ### 1. Installer les dépendances

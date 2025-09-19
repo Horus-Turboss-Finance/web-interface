@@ -23,4 +23,4 @@ Quel est votre rôle (dev, intégrateur), version, OS, etc. ?
 - Tests basiques
 - Stack overflow
 
-Merci - quelqu’un vous répondra bientôt.
+Merci - quelqu'un vous répondra bientôt.

@@ -14,7 +14,7 @@ labels: security
 **Important** : ce template est **pour signalement privé**. NE POSTEZ PAS de détails exploitables dans une issue publique.  
 Pour signaler une vulnérabilité envoyez un e-mail à : **docteur.turboss@gmail.com** (remplacez par votre contact sécurité).
 
-Champ minimal à fournir dans l’e-mail :
+Champ minimal à fournir dans l'e-mail :
 - Résumé court
 - Impact potentiel
 - Niveau de criticité estimé

@@ -17,7 +17,7 @@ assignees: ''
 URL ou chemin du fichier : `docs/...`
 
 ## Problème
-Quel est l’écart ? (erreur, omission, explication ambiguë)
+Quel est l'écart ? (erreur, omission, explication ambiguë)
 
 ## Proposition de correction
 Donnez un exemple de texte / patch minimal pour corriger.

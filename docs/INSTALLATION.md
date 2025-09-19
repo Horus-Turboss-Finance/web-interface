@@ -2,7 +2,7 @@
 Ce guide décrit toutes les étapes nécessaires pour installer, configurer et lancer l'interface web de **Cash Sights** en local.
 
 ## 🧰 Prérequis
-Assurez-vous d’avoir les éléments suivants installés :
+Assurez-vous d'avoir les éléments suivants installés :
 - **Git** `>=2.30`
 - **Node.js** `>=18.0.0`
 - **pnpm** `>=8.x` (ou `npm` / `yarn`, mais pnpm est conseillé)
@@ -96,4 +96,4 @@ Cela démarre un serveur local Vite pour visualiser le build statique.
 
 --- 
 
-<div align="center">Une fois l’installation terminée, vous pouvez commencer à développer, corriger des bugs ou proposer des améliorations via pull request.</div>
+<div align="center">Une fois l'installation terminée, vous pouvez commencer à développer, corriger des bugs ou proposer des améliorations via pull request.</div>

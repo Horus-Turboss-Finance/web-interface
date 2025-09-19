@@ -6,7 +6,7 @@
 
 ## 🧠 À propos
 **Cash Sights** est une plateforme qui permet aux jeunes (18-25 ans), mais aussi aux moins jeunes, de gérer leurs finances quotidiennes de manière simple et efficace grâce au **Kiff Score**.
-Ce dépôt contient l’**interface web** de Cash Sights, développée avec **React** et **ViteJS**, pour des performances optimales et une expérience utilisateur fluide.
+Ce dépôt contient l'**interface web** de Cash Sights, développée avec **React** et **ViteJS**, pour des performances optimales et une expérience utilisateur fluide.
 
 🔗 Site en production : [https://cashsight.fr/](https://cashsight.fr/)
 
@@ -51,11 +51,11 @@ Les contributions sont les bienvenues. Merci de consulter le fichier [`CONTRIBUT
 ## 🧩 TODO / Roadmap
 * [ ] Mise en place des **tests**
 * [ ] Internationalisation (i18n)
-* [ ] Ajout de métriques et d’outils d’analyse pour améliorer l’UX
-* [ ] Ajout d’un bouton pour afficher **toutes les transactions** (et non uniquement les dépenses ou les revenus)
+* [ ] Ajout de métriques et d'outils d'analyse pour améliorer l'UX
+* [ ] Ajout d'un bouton pour afficher **toutes les transactions** (et non uniquement les dépenses ou les revenus)
 * [ ] Modifier le style de l'entrée de sélection d'icônes (passer de *row* à *square*)
 * [ ] Supprimer et modifier les types de comptes et de catégories pour une compatibilité avec le format FR (et non franglais)
-* [ ] Ajouter un lien d’ancrage sur la page de contact, au niveau du titre, pointant vers le formulaire
+* [ ] Ajouter un lien d'ancrage sur la page de contact, au niveau du titre, pointant vers le formulaire
 * [ ] Dashboard administrateur
 * [ ] Intégration du **Kiff Score**
 * [ ] Page de configuration des notifications et des emails
@@ -66,4 +66,4 @@ Les contributions sont les bienvenues. Merci de consulter le fichier [`CONTRIBUT
 * [ ] Ajout d'un storybook (pour les composants UI)
 
 
-> Développé avec ❤️ par l’équipe **Horus Turboss Finance**.
+> Développé avec ❤️ par l'équipe **Horus Turboss Finance**.

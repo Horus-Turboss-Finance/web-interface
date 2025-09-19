@@ -13,7 +13,7 @@ Ce document décrit les bonnes pratiques à suivre pour assurer un développemen
 Le projet suit une architecture modulaire et évolutive. Merci de respecter la structure de fichiers existante lors de l'ajout de nouvelles fonctionnalités.
 
 ## 📦 Installation du projet
-Avant de commencer à développer, assurez-vous d’avoir les dépendances à jour :
+Avant de commencer à développer, assurez-vous d'avoir les dépendances à jour :
 ```bash
 pnpm install
 ````
@@ -41,7 +41,7 @@ git push origin feature/ajout-tableau-de-bord
 ```
 
 ## ✍️ Règles de commit avec Gitmoji
-Nous utilisons **gitmoji** pour améliorer la lisibilité de l’historique Git.
+Nous utilisons **gitmoji** pour améliorer la lisibilité de l'historique Git.
 
 ### 🔑 Principaux gitmojis utilisés :
 | Emoji | Code                 | Description                            |
@@ -54,7 +54,7 @@ Nous utilisons **gitmoji** pour améliorer la lisibilité de l’historique Git.
 | 📝    | `:memo:`             | MAJ de documentation                   |
 | 💄    | `:lipstick:`         | MAJ UI / style                         |
 | 🚚    | `:truck:`            | Renommage ou déplacement de fichier    |
-| ✅    | `:white_check_mark:` | Ajout d’un test passé avec succès      |
+| ✅    | `:white_check_mark:` | Ajout d'un test passé avec succès      |
 
 ### Exemple de message de commit :
 ```bash
@@ -64,7 +64,7 @@ git commit -m ":sparkles: Ajout du composant Header"
 ## ✅ Tests & Vérifications
 Avant toute **pull request**, merci de :
 
-1. Vérifier que l’application se build correctement :
+1. Vérifier que l'application se build correctement :
    ```bash
    pnpm build
    ```
@@ -79,7 +79,7 @@ Avant toute **pull request**, merci de :
    pnpm lint
    ```
 
-4. Vérifier que l’application fonctionne en local :
+4. Vérifier que l'application fonctionne en local :
    ```bash
    pnpm dev
    ```
@@ -93,13 +93,13 @@ Avant toute **pull request**, merci de :
 Une PR propre doit :
 * Être basée sur `develop` (jamais `main`)
 * Contenir un titre explicite et un résumé clair dans la description
-* Inclure des captures d’écran si modification UI
+* Inclure des captures d'écran si modification UI
 * Passer tous les tests
 * Être revue par au moins **1 staff**
 
 ## 💬 Code Review
 Lors des revues de code, on vérifie :
-* Cohérence avec l’architecture existante
+* Cohérence avec l'architecture existante
 * Lisibilité, modularité, DRY
 * Séparation logique des composants/fichiers
 * Qualité des messages de commits
@@ -115,4 +115,4 @@ Lors des revues de code, on vérifie :
 
 ## 🙏 Merci !
 Merci de contribuer à rendre **Cash Sights** plus robuste et plus agréable à utiliser !
-Pour toute question, n’hésitez pas à ouvrir une *issue* ou à contacter un membre de l’équipe core.
+Pour toute question, n'hésitez pas à ouvrir une *issue* ou à contacter un membre de l'équipe core.

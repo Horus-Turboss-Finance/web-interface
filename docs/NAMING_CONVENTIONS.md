@@ -1,5 +1,5 @@
 # 📘 Convention de nommage
-Ce document définit les règles à respecter afin d’assurer une **cohérence du code**, une **meilleure lisibilité**, et une **maintenance facilitée** sur le long terme.
+Ce document définit les règles à respecter afin d'assurer une **cohérence du code**, une **meilleure lisibilité**, et une **maintenance facilitée** sur le long terme.
 
 ## 📁 Noms de fichiers & dossiers
 
@@ -15,8 +15,8 @@ Ce document définit les règles à respecter afin d’assurer une **cohérence 
 ## 🧩 Composants React
 * Les composants doivent être nommés en **`PascalCase`**
 * 1 fichier = 1 composant (sauf très petits composants internes)
-* Utiliser **l’export par défaut** pour les composants
-* Toujours utiliser l’extension `.tsx`, même sans JSX, pour uniformité
+* Utiliser **l'export par défaut** pour les composants
+* Toujours utiliser l'extension `.tsx`, même sans JSX, pour uniformité
 
 ```tsx
 // ✅ src/components/Button.tsx
@@ -58,7 +58,7 @@ export const API_BASE_URL = "https://api.cashsight.fr";
 
 ## 🚏 Routes (React Router)
 * Définir les routes dans `src/app.tsx`
-* Utiliser **`kebab-case`** pour les segments d’URL
+* Utiliser **`kebab-case`** pour les segments d'URL
 * Nommer les composants de page en **`PascalCase`**
 
 ```tsx
@@ -83,8 +83,8 @@ export async function loginUser(credentials: Credentials) { ... }
 ## 📌 Bonnes pratiques supplémentaires
 * Commenter les hooks complexes ou les helpers non triviaux
 * Un composant = une seule responsabilité
-* Préférer l’import explicite aux `index.ts` opaques
+* Préférer l'import explicite aux `index.ts` opaques
 * Préfixer les types/interfaces avec `I` **uniquement si cela apporte de la clarté**
 
 > 🧠 Ces conventions peuvent évoluer avec le projet.
-> Toute proposition d’amélioration est bienvenue via une *pull request* ou une *issue*.
+> Toute proposition d'amélioration est bienvenue via une *pull request* ou une *issue*.

@@ -47,11 +47,11 @@ ex: stack trace / log...
 - [ ] Faible (cosmétique / contournable)
 
 ## Tentatives de dépannage
-- [ ] J’ai tenté de redémarrer
-- [ ] J’ai cherché dans les issues/PR
-- [ ] J’ai isolé le problème (mini-repro/branch)
+- [ ] J'ai tenté de redémarrer
+- [ ] J'ai cherché dans les issues/PR
+- [ ] J'ai isolé le problème (mini-repro/branch)
 
 ## Pièces jointes
-Ajouter captures d’écran, screencast, fichiers de repro.
+Ajouter captures d'écran, screencast, fichiers de repro.
 
 ```
