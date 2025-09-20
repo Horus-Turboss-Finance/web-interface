@@ -12,6 +12,8 @@ Ce dépôt contient l'**interface web** de Cash Sights, développée avec **Reac
 
 📁 Dépôt Git : `git@github.com:Horus-Turboss-Finance/web-interface.git`
 
+![Alt](https://repobeats.axiom.co/api/embed/5ca0d8a58e874fedaf226bdd662c3cdb47e0b7a9.svg "Repobeats analytics image")
+
 ## ⚙️ Stack technique
 * **React 19.1.0** – Interface utilisateur moderne et réactive
 * **ViteJS 7.0.4** – Bundler ultra-rapide pour le développement
