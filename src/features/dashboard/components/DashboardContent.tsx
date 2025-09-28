@@ -9,10 +9,13 @@ import { TransactionList } from "./TransactionList";
 import type { ModalFieldType } from "../types/types";
 import { reduceDateFormat } from "../utils/dateUtils";
 import type { IUser } from "../../../types/@types.user";
+import { BannerMessage } from "../../../components/message";
 import { type ITransaction } from "../../../types/@types.financesParams";
 
 interface DashboardContentProps {
   user: IUser | null;
+  kiff: number | null;
+  kiffMessage: "relax" | "serré" | "alerte";
   transactions: ITransaction[];
   transactionFilter: "debit" | "credit";
   setTransactionFilter: (t: "debit" | "credit") => void;
@@ -29,6 +32,8 @@ interface DashboardContentProps {
  */
 export const DashboardContent: React.FC<DashboardContentProps> = ({
   user,
+  kiff,
+  kiffMessage,
   transactions,
   transactionFilter,
   setModalType,
@@ -46,9 +51,11 @@ export const DashboardContent: React.FC<DashboardContentProps> = ({
 
   return (
     <main className="main-content">
-      <HeaderSection user={user} onAdd={() => setModalType("createTransaction")} />
+      <HeaderSection user={user} onAdd={() => setModalType("createTransaction")} kiff={kiff} kiffMessage={kiffMessage} />
 
       <article>
+        <BannerMessage type="secondary" message="Le kiff score est encore en train d'être testé. Merci d'avoir une certaine réserve lors de son utilisation" />
+
         <FilterTabs
           selectedFilter={transactionFilter}
           onSelect={setTransactionFilter}
