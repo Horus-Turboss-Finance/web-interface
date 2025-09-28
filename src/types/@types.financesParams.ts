@@ -46,7 +46,7 @@ import { CircleDollarToSlotIcon } from "../assets/circle-dollar-to-slot";
 
 import type { ElementType } from "react";
 import { CarIcon } from "../assets/car";
-import { BusinessTimeIcon } from "../assets/business-time";
+import type { KiffResult } from "./kiff-algo.types";
 
 export const listIconCategory: Record<string, ElementType<{ color?: string }>> = {
   CircleDollarToSlotIcon,
@@ -285,12 +285,53 @@ export const FINANCIAL_PLATFORMS = {
   AUTRE: "/logo.png"
 }
 
+export const BankTypeValue = {
+  // Comptes courants
+  CURRENT: "current",
+  COMPTE_JEUNE: "compte_jeune",
+  COMPTE_JOINT: "compte_joint",
+
+  // Épargne
+  SAVINGS: "savings",
+  LIVRET_A: "livret_a",
+  LIVRET_JEUNE: "livret_jeune",
+  LIVRET_LDD: "livret_developpement_durable",
+  CEP: "compte_epargne_populaire",
+  PEL: "plan_epargne_logement",
+  CEL: "compte_epargne_logement",
+
+  // Comptes cartes
+  CREDIT_CARD: "credit_card",
+  DEBIT_CARD: "debit_card",
+  PREPAID_CARD: "prepaid_card",
+  VIRTUAL_CARD: "virtual_card",
+
+  // Investissement
+  INVESTMENT: "investment",
+  PEA: "plan_epargne_action",
+  PLAN_RETRAITE: "plan_retraite",
+
+  // Crypto
+  CRYPTO_WALLET: "crypto_wallet",
+  BITCOIN_WALLET: "bitcoin_wallet",
+  ETHEREUM_WALLET: "ethereum_wallet",
+
+  // Crédit
+  LOAN: "loan",
+  STUDENT_LOAN: "student_loan",
+  AUTO_LOAN: "auto_loan",
+  PERSONAL_LOAN: "personal_loan",
+  REVOLVING_CREDIT: "revolving_credit",
+  OVERDRAFT_ACCOUNT: "overdraft_account",
+
+  // Autres
+  CHILD_ACCOUNT: "child_account",
+  CASH: "cash",
+  OTHER: "other"
+}
+
 export const BankAccountType: Record<string, {value: string, icon: ElementType<{ color?: string }>}> = {
-  CHECKING: {value: "checking", icon: CircleDollarToSlotIcon},
   CURRENT: {value: "current", icon: SackDollarIcon},
-  COMPTE_CHEQUE: {value: "compte_cheque", icon: PeggyBankIcon},
-  COMPTE_A_VUE: {value: "compte_a_vue", icon: CircleDollarToSlotIcon},
-  COMPTE_DEPOT: {value: "compte_depot", icon: SackDollarIcon},
   COMPTE_JEUNE: {value: "compte_jeune", icon: PeggyBankIcon},
   COMPTE_JOINT: {value: "compte_joint", icon: HandshakeIcon},
   SAVINGS: {value: "savings", icon: HandHoldingDollarIcon},
@@ -300,39 +341,24 @@ export const BankAccountType: Record<string, {value: string, icon: ElementType<{
   CEP: {value: "compte_epargne_populaire", icon: AwardIcon},
   PEL: {value: "plan_epargne_logement", icon: HandHoldingDollarIcon},
   CEL: {value: "compte_epargne_logement", icon: HouseUserIcon},
-  FIXED_DEPOSIT: {value: "fixed_deposit", icon: MoneyBillWaveIcon},
-  MONEY_MARKET: {value: "money_market", icon: LandmarkIcon},
-  HIGH_YIELD_SAVINGS: {value: "high_yield_savings", icon: MoneyBillWaveIcon},
-  BUSINESS: {value: "business", icon: BusinessTimeIcon },
-  COMPTE_PRO: {value: "compte_pro", icon: GlobeIcon },
-  CORPORATE: {value: "corporate", icon: SackDollarIcon },
-  MERCHANT: {value: "merchant_account", icon: BusinessTimeIcon },
   CREDIT_CARD: {value: "credit_card", icon: HandHoldingDollarIcon },
   DEBIT_CARD: {value: "debit_card", icon: CircleDollarToSlotIcon },
   PREPAID_CARD: {value: "prepaid_card", icon: MoneyBillTrendUpIcon },
+  VIRTUAL_CARD: {value: "virtual_card", icon: HandHoldingDollarIcon },
   INVESTMENT: {value: "investment", icon: PeggyBankIcon },
-  RETIREMENT: {value: "retirement", icon: WineGlassIcon },
   PEA: {value: "plan_epargne_action", icon: PeggyBankIcon },
   PLAN_RETRAITE: {value: "plan_retraite", icon: FireIcon },
-  STOCK_PLAN: {value: "stock_plan", icon: PeggyBankIcon },
-  PRECIOUS_METALS: {value: "precious_metals", icon: MoneyBillWaveIcon },
   CRYPTO_WALLET: {value: "crypto_wallet", icon: MoneyBillTrendUpIcon },
   BITCOIN_WALLET: {value: "bitcoin_wallet", icon: CircleDollarToSlotIcon },
   ETHEREUM_WALLET: {value: "ethereum_wallet", icon: MoneyBillTrendUpIcon },
-  DEFI_ACCOUNT: {value: "defi_account", icon: CircleDollarToSlotIcon },
-  NFT_ACCOUNT: {value: "nft_account", icon: MoneyBillTrendUpIcon },
-  STABLECOIN_WALLET: {value: "stablecoin_wallet", icon: CircleDollarToSlotIcon },
   LOAN: {value: "loan", icon: FireIcon },
   STUDENT_LOAN: {value: "student_loan", icon: SchoolIcon },
   AUTO_LOAN: {value: "auto_loan", icon: CarIcon },
   PERSONAL_LOAN: {value: "personal_loan", icon: HouseUserIcon },
-  CASH: {value: "cash", icon: MoneyBillWaveIcon },
-  PENSION_FUND: {value: "pension_fund", icon: WineGlassIcon },
-  INSURANCE_ACCOUNT: {value: "insurance_account", icon: CircleDollarToSlotIcon },
-  MULTI_CURRENCY: {value: "multi_currency", icon: MoneyBillWaveIcon },
-  GIFT_CARD_ACCOUNT: {value: "gift_card_account", icon: GiftIcon },
-  HEALTH_SAVINGS_ACCOUNT: {value: "health_savings_account", icon: MedicalIcon },
+  REVOLVING_CREDIT: {value: "revolving_credit", icon: CircleDollarToSlotIcon },
+  OVERDRAFT_ACCOUNT: {value: "overdraft_account", icon: MoneyBillTrendUpIcon },
   CHILD_ACCOUNT: {value: "child_account", icon: HouseUserIcon },
+  CASH: {value: "cash", icon: MoneyBillWaveIcon },
   OTHER: {value: "other", icon: QuestionIcon }
 }
 
@@ -375,6 +401,7 @@ export interface ITransaction {
 }
 
 export interface FinancialContextType {
+  kiffData: KiffResult|null;
   category: ICategory[]|null;
   addCategory: (params: {name: string, icon: string, type: number}) => Promise<unknown>;
   removeCategory: (params: {id?: number, base_category?:string, data?: {icon:string, type: 1|2}}) => Promise<unknown>;

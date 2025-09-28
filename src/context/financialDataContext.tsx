@@ -8,6 +8,8 @@ import { useUser } from '../hooks/user';
 
 import { defaultCategories, type IBank, type ICategory, type ITransaction } from '../types/@types.financesParams';
 import { FinancialContext } from './financialContext';
+import { getKiffAPI } from '../features/api/kiff/kiffApi';
+import type { KiffResult } from '../types/kiff-algo.types';
 
 export const FinancialProvider : React.FC<{children: React.ReactNode}> = ({ children }) => {
   const {token} = useUser()
@@ -15,11 +17,17 @@ export const FinancialProvider : React.FC<{children: React.ReactNode}> = ({ chil
   const [bank, setBank] = useState<IBank[]|null>(null);
   const [category, setCategory] = useState<ICategory[]|null>(null)
   const [transaction, setTransaction] = useState<ITransaction[]|null>(null)
+  const [kiffData, setKiffData] = useState<KiffResult|null>(null)
 
   const fetchData = useCallback(async (token: string) => {
     const userCategories = await getCategoryAPI({ token });
     const BanksData = await getBanksAPI({token});
     const TransactionData = await getTransactionsApi({token});
+    const Kiff = await getKiffAPI({token});
+
+    console.log(Kiff)
+
+    setKiffData(Kiff)
 
     if(TransactionData.length > 0){
       const TransformedData = TransactionData.map((b): ITransaction => {
@@ -143,7 +151,7 @@ export const FinancialProvider : React.FC<{children: React.ReactNode}> = ({ chil
     })
   }
 
-  return <FinancialContext.Provider value={{bank, removeBank, updateBank, addBank, addCategory, category, removeCategory, updateCategory, transaction, addTransaction, removeTransaction, updateTransaction}}>
+  return <FinancialContext.Provider value={{bank, kiffData, removeBank, updateBank, addBank, addCategory, category, removeCategory, updateCategory, transaction, addTransaction, removeTransaction, updateTransaction}}>
     {children}
   </FinancialContext.Provider>
 };
