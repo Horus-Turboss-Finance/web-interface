@@ -12,7 +12,7 @@ import type { ModalFieldType, TransactionFormErrors, TransactionFormValues } fro
 
 export const useDashboard = () => {
   const { user } = useUser();
-  const { bank, category, transaction, addTransaction, removeTransaction, updateTransaction } = useFinancial();
+  const { bank, kiffData, category, transaction, addTransaction, removeTransaction, updateTransaction } = useFinancial();
   const {
     values,
     errors,
@@ -42,7 +42,7 @@ export const useDashboard = () => {
           amount: Number(valueSubmitted.amount),
           bankId: Number(valueSubmitted.bankId),
           categoryId: Number(valueSubmitted.categoryId),
-          type: String(valueSubmitted.type) === "Revenus" ? "credit" : "debit",
+          type: String(valueSubmitted.type).toLocaleLowerCase() === "revenus" ? "credit" : "debit",
           description: valueSubmitted.description,
           date: valueSubmitted.date,
           baseCategory: String(valueSubmitted.categoryId),
@@ -64,6 +64,7 @@ export const useDashboard = () => {
     values,
     errors,
     isValid,
+    kiffData,
     modalData,
     modalType,
     isSubmitting,

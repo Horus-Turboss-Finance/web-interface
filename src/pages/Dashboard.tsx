@@ -3,17 +3,18 @@
 // -> Toute la logique de state et les hooks customisés sont externalisés
 import React from "react";
 import DashboardHeader from "../features/dashboard/DashbardSEO";
+import { useDashboard } from "../features/dashboard/hooks/useDashboard";
+import type { ModalFieldType } from "../features/dashboard/types/types";
+import { DashboardModal } from "../features/dashboard/components/DashboardModal";
 import { DashboardSidebar } from "../features/dashboard/components/DashboardSidebar";
 import { DashboardContent } from "../features/dashboard/components/DashboardContent";
 import { DashboardFooterBar } from "../features/dashboard/components/DashboardFooterBar";
-import { useDashboard } from "../features/dashboard/hooks/useDashboard";
-import { DashboardModal } from "../features/dashboard/components/DashboardModal";
-import type { ModalFieldType } from "../features/dashboard/types/types";
 
 export const DashboardPage: React.FC = () => {
   const {
     user,
     errors,
+    kiffData,
     modalData,
     modalType,
     transactions,
@@ -30,21 +31,25 @@ export const DashboardPage: React.FC = () => {
     return setModalType(v);
   }
 
+  const kiffMood = kiffData?.mood ?? "alerte"
+
   return (
     <div className="dashboard">
       {/* SEO Header */}
       <DashboardHeader />
 
       {/* Sidebar desktop */}
-      <DashboardSidebar user={user} />
+      <DashboardSidebar user={user} kiff={kiffData?.kiff_ajuste ?? kiffData?.kiff_brut ?? 3} kiffMessage={kiffMood} />
 
       {/* Main Content */}
       <DashboardContent
         user={user}
         transactions={transactions}
+        setModalType={setsetModalType}
+        kiffMessage={kiffMood}
         transactionFilter={transactionFilter}
         setTransactionFilter={setTransactionFilter}
-        setModalType={setsetModalType}
+        kiff={kiffData?.kiff_ajuste ?? kiffData?.kiff_brut ?? 3} 
         onSelectTransaction={(t) => {
           handleChange("amount", Number(t?.amount))
           handleChange("bankId", String(t?.bankId))

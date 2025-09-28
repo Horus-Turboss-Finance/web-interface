@@ -21,8 +21,6 @@ const templateHtml = await fs.readFile(path.resolve(__dirname, './dist/client/in
 const app = express()
 
 app.use(compression())
-app.use(base, sirv(path.resolve(__dirname, './dist/client'), { extensions: [] }))
-
 // Servez les assets en statique AVANT (tu l'as déjà)
 app.use(base, sirv(path.resolve(__dirname, './dist/client'), { extensions: [] }))
 
@@ -33,7 +31,7 @@ app.get(/\.(js|css|map|json|png|jpg|jpeg|svg|ico|webp|woff2?)$/, (req, res) => {
 // SSR UNIQUEMENT pour les requêtes HTML
 app.get(/(.*)/, async (req, res, next) => {
   const accept = req.headers.accept || '';
-  if (!accept.includes('text/html')) return next(); // Laisse passer les assets/API
+  if (!accept.includes('text/html') && !accept.includes('*/*')) return res.status(406).end("Bad accept type") // Laisse passer les assets/API
 
   try {
     const htmlRender = render(req.originalUrl);
