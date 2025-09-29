@@ -15,7 +15,7 @@
     "release:major": "npm run release -- --release-as major",
     "commit": "gitmoji -c",
     "preproduction": "npm install && npm run build:client && npm run build:server",
-    "production": "pm2 startOrReload ./ecosystem.config.js"
+    "production": "npm run preproduction && pm2 startOrReload ./ecosystem.config.js"
   },
   "dependencies": {
     "@types/react-helmet": "^6.1.11",
