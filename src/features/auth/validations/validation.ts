@@ -17,8 +17,8 @@ export function validateSignupForm(v: SignupFormValues|null): SignupFormErrors {
   if (!isNonEmpty(`${v?.email}`)) e.email = "Veuillez renseigner un email.";
   else if (!isEmail(`${v?.email}`)) e.email = "Email invalide.";
 
-  if (!isNonEmpty(`${v?.password}`)) e.password = "Veuillez renseigner un mot de passe.";
-  else if (v?.password?.length || 0 < PASSWORD_MIN) e.password = `Le mot de passe doit contenir au moins ${PASSWORD_MIN} caractères.`;
+  if (!isNonEmpty(`${v?.password}`) || `${v?.password}`.length == 0 ) e.password = "Veuillez renseigner un mot de passe.";
+  else if (`${v?.password}`.length < PASSWORD_MIN) e.password = `Le mot de passe doit contenir au moins ${PASSWORD_MIN} caractères.`;
 
   if (!v?.acceptTerms) e.global = "Veuillez accepter les conditions d'utilisation.";
 
@@ -31,7 +31,7 @@ export function validateSigninForm(v: SigninFormValues|null): SigninFormErrors {
   if (!isNonEmpty(`${v?.email}`)) e.email = "Veuillez renseigner un email.";
   else if (!isEmail(`${v?.email}`)) e.email = "Email invalide.";
 
-  if (!isNonEmpty(`${v?.password}`)) e.password = "Veuillez renseigner un mot de passe.";
+  if (!isNonEmpty(`${v?.password}`) || `${v?.password}`.length == 0) e.password = "Veuillez renseigner un mot de passe.";
   else if (`${v?.password}`.length < PASSWORD_MIN) e.password = `Le mot de passe doit contenir au moins ${PASSWORD_MIN} caractères.`;
 
   return e;
