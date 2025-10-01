@@ -18,7 +18,7 @@ export function validateSignupForm(v: SignupFormValues|null): SignupFormErrors {
   else if (!isEmail(`${v?.email}`)) e.email = "Email invalide.";
 
   if (!isNonEmpty(`${v?.password}`)) e.password = "Veuillez renseigner un mot de passe.";
-  else if (v?.password.length || 0 < PASSWORD_MIN) e.password = `Le mot de passe doit contenir au moins ${PASSWORD_MIN} caractères.`;
+  else if (v?.password?.length || 0 < PASSWORD_MIN) e.password = `Le mot de passe doit contenir au moins ${PASSWORD_MIN} caractères.`;
 
   if (!v?.acceptTerms) e.global = "Veuillez accepter les conditions d'utilisation.";
 
