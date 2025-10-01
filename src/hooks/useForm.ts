@@ -49,6 +49,7 @@ export function useForm<FormValues, FormErrors>(
     [validationErrors]
   );
 
+  console.log(validationErrors)
   /**
    * Met à jour un champ du formulaire + réinitialise les erreurs locales
    */

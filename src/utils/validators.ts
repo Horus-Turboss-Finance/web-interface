@@ -5,7 +5,8 @@
 
 export const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-export function isNonEmpty(value: string): boolean {
+export function isNonEmpty(value?: string): boolean {
+  if(!value) return false;
   return value.trim().length > 0;
 }
 
